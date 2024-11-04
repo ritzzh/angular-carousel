@@ -2,8 +2,8 @@
     <div class="carousel-card">
       <h3>OFDM {{ idx }}</h3>
       <h4>
-        ({{ cardinfo?.start_frequency }} -
-        {{ cardinfo?.end_frequency }})
+        ({{ cardinfo?.start_frequency | hertz}} -
+        {{ cardinfo?.end_frequency | hertz}})
       </h4>
       <div class="grid-container">
         <div class="grid-item">

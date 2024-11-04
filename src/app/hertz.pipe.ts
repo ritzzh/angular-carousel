@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class HertzPipe implements PipeTransform {
 
-  transform(value: string): string {
+  transform(value: string|undefined): string {
     return value+"MHz";
   }
 
