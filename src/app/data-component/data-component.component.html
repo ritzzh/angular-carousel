@@ -1,0 +1,91 @@
+<div class="carousel-container">
+  <div *ngFor="let chunk of data | keyvalue; index as i">
+    <div class="carousel-card">
+      <h3>OFDM {{ i + 1 }}</h3>
+      <h4>
+        ({{ chunk.value.start_frequency | hertz }} -
+        {{ chunk.value.end_frequency | hertz }})
+      </h4>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h4>Profile</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of chunk.value.modulation; index as i"
+          >
+            <div class="item">Profile {{ i }}</div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Modulation</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of chunk.value.modulation; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>CM CCW (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of chunk.value.cmcorrcw; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>CM UCCW (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of chunk.value.cmuncorrcw; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Total CW</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of chunk.value.cmtotalcw; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Traffic / Profile (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of chunk.value.traffic_per_profile; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Traffic / Last Poll (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="
+              let content of chunk.value.traffic_per_last_poll;
+              index as i
+            "
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

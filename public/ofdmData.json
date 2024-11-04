@@ -1,0 +1,131 @@
+{
+    "633000000 - 795000000": {
+        "channel_id": 28,
+        "modulation": [
+            "QAM64",
+            "QAM1024",
+            "QAM256",
+            "QAM4096"
+        ],
+        "plc_frequency": 668,
+        "cmcorrcw": [
+            "0.00",
+            "0.00",
+            "11.70",
+            "0.00"
+        ],
+        "cmuncorrcw": [
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00"
+        ],
+        "traffic_per_profile": [
+            "0.40",
+            "2.65",
+            "96.95",
+            "0.00"
+        ],
+        "start_frequency": "631.00",
+        "end_frequency": "796.90",
+        "cmtotalcw": [
+            "111373885",
+            "736246612",
+            "26961757742",
+            "0"
+        ],
+        "modem_efficiency": "66.85",
+        "traffic_per_last_poll": [
+            "0.56",
+            "1.65",
+            "97.79",
+            "0.00"
+        ]
+    },
+    "801000000 - 987000000": {
+        "channel_id": 32,
+        "modulation": [
+            "UNKNOWN",
+            "QAM1024",
+            "QAM256",
+            "QAM4096"
+        ],
+        "plc_frequency": 812,
+        "cmcorrcw": [
+            "0.00",
+            "0.08",
+            "20.15",
+            "0.00"
+        ],
+        "cmuncorrcw": [
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00"
+        ],
+        "traffic_per_profile": [
+            "0.77",
+            "2.84",
+            "96.40",
+            "0.00"
+        ],
+        "start_frequency": "799.00",
+        "end_frequency": "988.90",
+        "cmtotalcw": [
+            "237679291",
+            "879242120",
+            "29880035611",
+            "0"
+        ],
+        "modem_efficiency": "0.00",
+        "traffic_per_last_poll": [
+            "0.80",
+            "2.94",
+            "96.26",
+            "0.00"
+        ]
+    },
+    "1005000000 - 1191000000": {
+        "channel_id": 32,
+        "modulation": [
+            "QAM64",
+            "QAM1024",
+            "QAM256",
+            "QAM4096"
+        ],
+        "plc_frequency": 1008,
+        "cmcorrcw": [
+            "0.00",
+            "0.13",
+            "10.00",
+            "0.00"
+        ],
+        "cmuncorrcw": [
+            "0.00",
+            "0.00",
+            "0.00",
+            "0.00"
+        ],
+        "traffic_per_profile": [
+            "0.49",
+            "11.68",
+            "87.83",
+            "0.00"
+        ],
+        "start_frequency": "1003.00",
+        "end_frequency": "1192.90",
+        "cmtotalcw": [
+            "39314320",
+            "944515440",
+            "7099974657",
+            "0"
+        ],
+        "modem_efficiency": "68.22",
+        "traffic_per_last_poll": [
+            "0.17",
+            "9.49",
+            "90.34",
+            "0.00"
+        ]
+    }
+}

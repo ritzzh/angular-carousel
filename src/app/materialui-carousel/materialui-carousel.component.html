@@ -1,0 +1,33 @@
+<div class="carousel">
+    <button mat-icon-button (click)="prev()" class="carousel-nav left">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  
+    <div class="carousel-container">
+      <div class="cards" [ngStyle]="{'transform': 'translateX(' + translateX + 'vw)'}">
+        <ng-container *ngFor="let item of keyvalueArray; let i = index">
+          <app-child-component
+            [cardinfo]="item.value"
+            [idx]="i"
+            *ngIf="isVisible(i)"
+            class="card"
+          >
+          </app-child-component>
+        </ng-container>
+      </div>
+      <div class="slider">
+        <ng-container *ngFor="let chunk of keyvalueArray; let i = index">
+          <div
+            class="slide-btn"
+            (click)="selectSlide(i)"
+            [ngClass]="{ active: currentIndex === i }"
+          ></div>
+        </ng-container>
+      </div>
+    </div>
+  
+    <button mat-icon-button (click)="next()" class="carousel-nav right">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+  

@@ -1,0 +1,89 @@
+<div class="card-outer">
+    <div class="carousel-card">
+      <h3>OFDM {{ idx }}</h3>
+      <h4>
+        ({{ cardinfo?.start_frequency }} -
+        {{ cardinfo?.end_frequency }})
+      </h4>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h4>Profile</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of cardinfo?.modulation; index as i"
+          >
+            <div class="item">Profile {{ i }}</div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Modulation</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of cardinfo?.modulation; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>CM CCW (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of cardinfo?.cmcorrcw; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>CM UCCW (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of cardinfo?.cmuncorrcw; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Total CW</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of cardinfo?.cmtotalcw; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Traffic / Profile (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="let content of cardinfo?.traffic_per_profile; index as i"
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <h4>Traffic / Last Poll (%)</h4>
+          <div
+            class="item-display"
+            *ngFor="
+              let content of cardinfo?.traffic_per_last_poll;
+              index as i
+            "
+          >
+            <div class="item">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

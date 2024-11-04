@@ -1,0 +1,59 @@
+
+
+.carousel
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    align-items: center;
+    max-width: 85vw;
+}
+.carousel-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-nav{
+    background-color: white;
+}
+.carousel-nav.left{
+    height: 20%;
+    border: none;
+}
+.carousel-nav.right{
+    height: 20%;
+    border: none;
+}
+/* cards */
+.cards{
+    display: flex;
+    transition: transform .5s ease;
+}
+.card{
+    min-width: 80vw;
+    margin:  auto auto;
+    flex: 0 0 auto;
+}
+
+/* slide */
+
+.slider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 15px;
+}
+
+.slide-btn{
+    height: 8px;
+    width: 43px;
+    background-color: white;
+    border-radius: 25px;
+    border: solid rgb(196, 196, 196) 1px;
+    margin: auto 2px;
+    z-index: 2;
+}
+
+.active{
+    background-color: #3B82F6;
+}
