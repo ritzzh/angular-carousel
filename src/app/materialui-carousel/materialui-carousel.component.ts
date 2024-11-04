@@ -6,14 +6,15 @@ import { Data } from '../data';
 import { CommonModule } from '@angular/common';
 import { DataStructure } from '../data-structure';
 import { MatCommonModule } from '@angular/material/core';
-import { MatIconModule } from '@angular/material/icon'; 
+import { MatIconModule } from '@angular/material/icon';
+import { DataComponentComponent } from "../data-component/data-component.component"; 
 
 
 
 @Component({
   selector: 'app-materialui-carousel',
   standalone: true,
-  imports: [MatSlideToggleModule, ChildComponentComponent,CommonModule,MatCommonModule,MatIconModule],
+  imports: [MatSlideToggleModule, ChildComponentComponent, CommonModule, MatCommonModule, MatIconModule, DataComponentComponent],
   templateUrl: './materialui-carousel.component.html',
   styleUrl: './materialui-carousel.component.css'
 })
@@ -21,8 +22,9 @@ export class MaterialuiCarouselComponent {
   data: { [key: string]: any } = {};
   keyvalueArray: Array<{ key: string, value: any }> = []; 
   currentIndex:number=0;
-  autoSlideInterval:any;
   translateX = 0;
+
+ 
 
   constructor(private http: HttpClient, private cdr:ChangeDetectorRef) {}
   ngOnInit(): void {
@@ -64,4 +66,49 @@ export class MaterialuiCarouselComponent {
   isVisible(index: number): boolean {
     return true;
   }
+
+
+  // without data passing
+
+  indexAt:number = 0;
+  translateXAt=0;
+  arraySize = 0;
+  mockArr:any = []
+
+  recieveData(data:number){
+    let tempsize = data;
+    this.arraySize = tempsize;
+    let tempArray = Array.from({length:this.arraySize},(_,i)=>i);
+    this.mockArr = tempArray;
+  }
+
+  updateTranslateXAT() {
+    this.translateXAt = -this.indexAt * 80;
+  }
+
+
+  nextAt() {
+    if (this.indexAt < this.arraySize- 1) {
+      this.indexAt++;
+    } else {
+      this.indexAt = 0; 
+    }
+    this.updateTranslateXAT();
+  }
+
+  prevAt() {
+    if (this.indexAt > 0) {
+      this.indexAt--;
+    } else {
+      this.indexAt = this.arraySize - 1;
+    }
+    this.updateTranslateXAT();
+  }
+
+  selectSlideAt(index: number) {
+    this.indexAt = index;
+    this.updateTranslateXAT();
+  }
+
+
 }

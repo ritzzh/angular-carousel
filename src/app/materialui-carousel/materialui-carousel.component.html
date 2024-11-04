@@ -1,3 +1,7 @@
+<div class="div">
+  <h3>Passing data to each child</h3>
+</div>
+
 <div class="carousel">
     <button mat-icon-button (click)="prev()" class="carousel-nav left">
       <mat-icon>chevron_left</mat-icon>
@@ -30,4 +34,37 @@
       <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
+
+  <div class="div">
+    <h3>Passing no data to child</h3>
+    <p>Reciveing array length from child</p>
+  </div>
+
+  <div class="carousel">
+    <button mat-icon-button (click)="prevAt()" class="carousel-nav left">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  
+    <div class="carousel-container">
+      <div class="cards" [ngStyle]="{'transform': 'translateX(' + translateXAt + 'vw)'}">
+        <ng-container>
+          <app-data-component (dataEvent)="recieveData($event)" ></app-data-component>
+        </ng-container>
+      </div>
+      <div class="slider">
+        <ng-container *ngFor="let fake of mockArr;let i=index">
+          <div
+            class="slide-btn"
+            (click)="selectSlideAt(i)"
+            [ngClass]="{ active: indexAt === i }"
+          ></div>
+        </ng-container>
+      </div>
+    </div>
+  
+    <button mat-icon-button (click)="nextAt()" class="carousel-nav right">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+  
   

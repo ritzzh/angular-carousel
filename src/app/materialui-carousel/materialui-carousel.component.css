@@ -1,4 +1,16 @@
 
+.div{
+    text-align: center;
+    font-family:monospace;
+    border-radius: 25px;
+    background-color: lightblue;
+    width: 80vw;
+    margin: 10px auto;
+    padding: 10px;
+}
+.div p{
+    margin: 0px;
+}
 
 .carousel
 {
